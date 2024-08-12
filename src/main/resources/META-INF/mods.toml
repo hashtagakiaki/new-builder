@@ -1,0 +1,22 @@
+modLoader="javafml"
+loaderVersion="[46,)"
+license="All Rights Reserved"
+[[mods]]
+modId="akiaki1"
+version="1.0.0"
+displayName="myfirst"
+authors="akiakiakita"
+description='''我の初めてのmod'''
+[[dependencies.akiaki1]]
+  modId="forge"
+  mandatory=true
+  versionRange="[46,)"
+  ordering="NONE"
+  side="BOTH"
+
+[[dependencies.akiaki1]]
+  modId="minecraft"
+  mandatory=true
+  versionRange="[1.20.1]"
+  ordering="NONE"
+  side="BOTH"
