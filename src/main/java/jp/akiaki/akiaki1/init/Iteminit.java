@@ -1,5 +1,6 @@
 package jp.akiaki.akiaki1.init;
 
+import jp.akiaki.akiaki1.item.Builder_location_card;
 import jp.akiaki.akiaki1.item.Rod_of_lightning;
 import jp.akiaki.akiaki1.ExampleMod;
 import net.minecraft.world.food.FoodProperties;
@@ -25,5 +26,6 @@ public class Iteminit {
 
     public static final RegistryObject<Item> BUILDER_ITEM = addToTab(ITEMS.register("builder",
             () -> new BlockItem(Blockinit.BUILDER.get(), new Item.Properties())));
+    public static final RegistryObject<Item> BUILDER_CARD = addToTab(ITEMS.register("builder_card", () -> new Builder_location_card(new Item.Properties())));
 
 }
