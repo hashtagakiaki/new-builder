@@ -31,12 +31,13 @@ public class Builder_blockentity extends BlockEntity {
     }
 
     public void builder_builder_place(Level pLevel, BlockPos pPos, BlockState pState) {
-        if (abs_copypos != null) {
+        if (rel_copypos != null) {
+            abs_copypos = rel_copypos.offset(pPos);
             pLevel.setBlock(abs_copypos, pState, 2);
-            if (pLevel.getBlockEntity(abs_copypos) instanceof Builder_blockentity placed_builder) {
+            if (pLevel.getBlockEntity(abs_copypos) instanceof Builder_blockentity placed_builder && counter > 0) {
                 placed_builder.counter = counter - 1;
                 placed_builder.rel_copypos = rel_copypos;
-                placed_builder.builder_builder_place(pLevel, pPos, pState);
+                placed_builder.builder_builder_place(placed_builder.getLevel(), placed_builder.getBlockPos(), placed_builder.getBlockState());
             }
         }
     }
