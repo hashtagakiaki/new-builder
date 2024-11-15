@@ -26,10 +26,6 @@ public class Builder_blockentity extends BlockEntity {
         super(Blockentityinit.BUILDER_BLOCKENTITY.get(), p_155229_, p_155230_);
     }
 
-    public void load(CompoundTag nbt) {
-        super.load(nbt);
-    }
-
     public void builder_builder_place(Level pLevel, BlockPos pPos, BlockState pState) {
         if (rel_copypos != null) {
             abs_copypos = rel_copypos.offset(pPos);
@@ -55,5 +51,15 @@ public class Builder_blockentity extends BlockEntity {
                 builder_builder_place(level, pos, state);
             }
         }
+    }
+
+    public void load(@NotNull CompoundTag nbt) {
+        super.load(nbt);
+    }
+
+    @Override
+    public void saveAdditional(@NotNull CompoundTag nbt) {
+        super.saveAdditional(nbt);
+        var BuilderData = new CompoundTag();
     }
 }
